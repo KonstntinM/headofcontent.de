@@ -3,7 +3,7 @@
     <div class="flex flex-col items-center justify-center mx-auto sm:p-6 xl:p-8 lg:flex-row lg:max-w-6xl lg:p-0">
         <div class="container relative z-20 flex flex-col w-full px-5 pb-1 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:pr-0 md:pr-6 md:pl-0 lg:pl-5 xl:pr-10 sm:items-center lg:items-start lg:mb-0">
             <h1 class="relative z-20 text-5xl font-extrabold leading-none xl:text-6xl sm:text-center lg:text-left">
-                <span class="accent">Junge, unabhänige</span><br>
+                <div class="accent pb-1">Junge, unabhänige</div>
                 <span class="mt-1 text-gray-800 lg:mt-0">Reportagen aus der Hauptstadt</span>
             </h1>
             <p class="relative z-20 block mt-6 text-base text-gray-500 xl:text-xl sm:text-center lg:text-left">Ansprechende politische Berichterstattung für Jugendliche und junge Erwachsene fehlt uns im Internet. Wir sind hier, um das zu ändern.</p>

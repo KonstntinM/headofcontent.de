@@ -12,7 +12,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: "https://plausible.io/js/plausible.js", 'data-domain': "headofcontent.de", defer: true }
+      { src: "https://plausible.io/js/plausible.js", 'data-domain': "headofcontent.de", defer: true },
+      { src: "https://analytics.headofcontent.de/js/plausible.js", 'data-domain': "headofcontent.de", defer: true , async: true}
+
     ]
   },
 
