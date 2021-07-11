@@ -74,6 +74,8 @@ export default {
         } catch {
           this.error = "Irgendetwas ist schief gelaufen. Das geht auf unsere Kappe! Bitte kontaktiere uns direkt über unsere E-Mailadresse (s. oben)."
         }
+
+        plausible('Kontaktanfrage');
       }
     }
   }
