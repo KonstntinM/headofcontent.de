@@ -2,7 +2,6 @@ const express = require('express')
 const nodemailer = require("nodemailer");
 const {verify} = require('hcaptcha');
 var bodyParser = require('body-parser')
-var cors = require('cors')
 require('dotenv').config()
 
 const app = express()
@@ -10,10 +9,17 @@ const port = process.env.PORT || 4000
 
 const hCaptchaSecret = process.env.HCAPTCHA_SECRET || ''
 
-var corsOptions = {
-    origin: 'https://*.headofcontent.de',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+const corsOptions = {
+    origin: ["https://www.headofcontent.de","https://headofcontent.de"],
+    default: "https://www.headofcontent.de"
 }
+
+app.all('*', function(req, res, next) {
+        var origin = corsOptions.origin.indexOf(req.header('origin').toLowerCase()) > -1 ? req.headers.origin : corsOptions.default;
+        res.header("Access-Control-Allow-Origin", origin);
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+});
 
 var transporter = nodemailer.createTransport({
     host: "mail.your-server.de",
@@ -26,7 +32,6 @@ var transporter = nodemailer.createTransport({
 });
 
 app.use(bodyParser.json());
-app.use(cors(corsOptions))
 
 app.get('/', (req, res) => {
     res.redirect('https://headofcontent.de');
