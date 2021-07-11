@@ -56,27 +56,28 @@ export default {
       }
       
       else {
-        this.$axios.$post('https://mail.headofcontent.de/send-mail', {
-          name: this.name,
-          absender: this.email,
-          nachricht: this.message,
-          hCaptcha: hCaptchaToken
-        })
-          .then(function (response) {
-            if (response.stauts == 200) {
-              this.error = null
-              this.success = true;
-              this.name = ''
-              this.email = ''
-              this.message = ''
-            } else {
-              this.error = response.message
-            }
+        try {
+          var response = await this.$axios.$post('https://mail.headofcontent.de/send-mail', {
+            name: this.name,
+            absender: this.email,
+            nachricht: this.message,
+            hCaptcha: hCaptchaToken
           })
-          .catch(function () {
-            this.error = "Irgendetwas ist schief gelaufen. Das geht auf unsere Kappe! Bitte kontaktiere uns direkt über unsere E-Mailadresse (s. oben)."
-          });
 
+          console.log(response);
+
+          if (response.data.stauts == 200) {
+            this.error = null
+                this.success = true;
+                this.name = ''
+                this.email = ''
+                this.message = ''
+          } else {
+            this.error = response.data.message
+          }
+        } catch {
+          this.error = "Irgendetwas ist schief gelaufen. Das geht auf unsere Kappe! Bitte kontaktiere uns direkt über unsere E-Mailadresse (s. oben)."
+        }
       }
     }
   }
