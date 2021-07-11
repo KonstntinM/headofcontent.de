@@ -65,6 +65,7 @@ app.post('/send-mail', (req, res) => {
                             if (err) {
                                 res.status(500).send();
                             } else {
+                                console.log("Eine nachricht wurde erfolgreich versendet. Info: " + info , "Error: " + err);
                                 res.status(200).send({ stauts: 200, message: 'Deine Nachricht wurde erfolgreich versendet.'})
                             }
                         })
