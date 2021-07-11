@@ -101,7 +101,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/strapi',
     '@nuxtjs/markdownit',
-    'nuxt-mail',
     'hcaptcha-nuxt'
   ],
 

@@ -37,28 +37,46 @@ export default {
     success: false
   }),
   methods: {
-    send() {
+    async send() {
 
       const emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
       // add captcha check!
 
       if (!this.name || !this.email || !this.message || !emailPattern.test(this.email)) {
-        this.error = "Bitte überprüfe deine Angaben und versuche es erneut."
+        return this.error = "Bitte überprüfe deine Angaben und versuche es erneut."
+      }
+
+      var hCaptchaToken = await this.$hcaptcha.getResponse();
+
+      console.log(hCaptchaToken);
+
+      if (!hCaptchaToken) {
+        return this.error = "Bitte löse das CAPTCHA und versuche es erneut."
       }
       
       else {
-        this.$mail.send({
-          from: this.email,
-          subject: 'Nachricht von ' + this.name + ' über das Kontaktformular auf unserer Webseite',
-          text: this.message,
+        this.$axios.$post('https://mail.headofcontent.de/send-mail', {
+          name: this.name,
+          absender: this.email,
+          nachricht: this.message,
+          hCaptcha: hCaptchaToken
         })
+          .then(function (response) {
+            if (response.status == 200) {
+              this.error = null
+              this.success = true;
+              this.name = ''
+              this.email = ''
+              this.message = ''
+            } else {
+              this.error = response.message
+            }
+          })
+          .catch(function (error) {
+            this.error = "Irgendetwas ist schief gelaufen. Das geht auf unsere Kappe! Bitte kontaktiere uns direkt über unsere E-Mailadresse (s. oben)."
+          });
 
-        this.error = null
-        this.success = true;
-        this.name = ''
-        this.email = ''
-        this.message = ''
       }
     }
   }
