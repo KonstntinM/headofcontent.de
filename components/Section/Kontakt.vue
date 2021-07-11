@@ -62,8 +62,6 @@ export default {
             hCaptcha: hCaptchaToken
           })
 
-          console.log(response);
-
           if (response.stauts == 200) {
             this.error = null
                 this.success = true;
