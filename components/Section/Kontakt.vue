@@ -49,8 +49,6 @@ export default {
 
       var hCaptchaToken = await this.$hcaptcha.getResponse();
 
-      console.log(hCaptchaToken);
-
       if (!hCaptchaToken) {
         return this.error = "Bitte löse das CAPTCHA und versuche es erneut."
       }
@@ -66,14 +64,14 @@ export default {
 
           console.log(response);
 
-          if (response.data.stauts == 200) {
+          if (response.stauts == 200) {
             this.error = null
                 this.success = true;
                 this.name = ''
                 this.email = ''
                 this.message = ''
           } else {
-            this.error = response.data.message
+            this.error = response.message
           }
         } catch {
           this.error = "Irgendetwas ist schief gelaufen. Das geht auf unsere Kappe! Bitte kontaktiere uns direkt über unsere E-Mailadresse (s. oben)."
