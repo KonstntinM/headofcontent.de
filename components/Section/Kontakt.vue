@@ -63,7 +63,7 @@ export default {
           hCaptcha: hCaptchaToken
         })
           .then(function (response) {
-            if (response.status == 200) {
+            if (response.stauts == 200) {
               this.error = null
               this.success = true;
               this.name = ''
@@ -73,7 +73,7 @@ export default {
               this.error = response.message
             }
           })
-          .catch(function (error) {
+          .catch(function () {
             this.error = "Irgendetwas ist schief gelaufen. Das geht auf unsere Kappe! Bitte kontaktiere uns direkt über unsere E-Mailadresse (s. oben)."
           });
 
