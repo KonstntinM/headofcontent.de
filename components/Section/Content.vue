@@ -46,7 +46,6 @@ export default {
   created: async function () {
     this.beiträge = await this.$strapi.find('Beitrags', {'_limit': 3, '_sort': 'created_at:DESC'});
     this.videos = await this.$strapi.find('Videos', {'_limit': 3, '_sort': 'veroeffentlicht:ASC'});
-    // this.interviews = await this.$strapi.find('Interviews', {'_limit': 3, '_sort': 'veroeffentlicht:ASC'});
   }
 }
 </script>
