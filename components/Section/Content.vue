@@ -13,18 +13,6 @@
             <SectionContentVideo v-for="video in this.videos" :key="video.id" :id="video.id" :image="video.Vorschaubild" :tag="video.Tag" :title="video.Titel" />
         </div>
 
-      <div class="flex items-center justify-between w-full pb-5 mt-3 mb-8 border-b border-gray-200">
-            <h2 class="text-3xl font-bold text-gray-800">Interviews</h2>
-            <NuxtLink to="/interviews" href="#_" class="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">
-                <span>Alle Interviews</span>
-                <svg class="w-4 h-4 mt-0.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </NuxtLink>
-        </div>
-
-        <div class="grid grid-cols-12 gap-6">
-            <SectionContentInterview v-for="interview in this.interviews" :key="interview.id" :id="interview.id" :image="interview.Vorschaubild" :tag="interview.Tag" :title="interview.Titel" />
-        </div>
-
         <div class="flex items-center justify-between w-full pb-5 mt-16 mb-8 border-b border-gray-200">
             <h2 class="text-3xl font-bold text-gray-800">Aktuelles</h2>
             <NuxtLink to="/aktuelles" href="#_" class="flex items-center text-base font-semibold text-blue-400 hover:text-blue-500 group">
@@ -36,6 +24,12 @@
         <div class="grid grid-cols-12 gap-6">
             <SectionContentBeitrag v-for="beitrag in this.beiträge" :key="beitrag.id" :id="beitrag.id" :image="beitrag.Beitragsbild" :title="beitrag.Titel" />   
         </div>
+
+        <div class="flex items-center justify-center w-full pb-1 mt-4 mb-6">
+            <h2 class="text-4xl font-bold text-gray-800">Head of Podcast</h2>
+        </div>
+
+        <iframe src="https://open.spotify.com/embed/show/3Hbhfz5FmpmhVqMZfRVEpi?utm_source=headofcontent.de" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </div>
   </section>
 </template>
@@ -52,7 +46,7 @@ export default {
   created: async function () {
     this.beiträge = await this.$strapi.find('Beitrags', {'_limit': 3, '_sort': 'created_at:DESC'});
     this.videos = await this.$strapi.find('Videos', {'_limit': 3, '_sort': 'veroeffentlicht:ASC'});
-    this.interviews = await this.$strapi.find('Interviews', {'_limit': 3, '_sort': 'veroeffentlicht:ASC'});
+    // this.interviews = await this.$strapi.find('Interviews', {'_limit': 3, '_sort': 'veroeffentlicht:ASC'});
   }
 }
 </script>
