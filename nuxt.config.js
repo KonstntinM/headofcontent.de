@@ -5,7 +5,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Webseite der unabhänigen Jugendredaktion "Head of Content" aus Berlin' },
+      { hid: 'description', name: 'description', content: 'An Berichterstattung zu aktueller Politik mangelt es nicht im Internet. Hunderte Nachrichtenseiten kämpfen mit YouTube-Videos und Blogs um die Aufmerksamkeit der Nutzer:innen. Doch eine Sache hat uns bisher gefehlt: Die Perspektive junger Menschen. Wir sind hier, um das zu ändern!' },
       { lang: "de" }
     ],
     link: [
