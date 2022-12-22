@@ -10,7 +10,7 @@
         </div>
 
         <div class="grid grid-cols-12 gap-6">
-            <SectionContentVideo v-for="video in this.videos" :key="video.id" :id="video.id" :image="video.Vorschaubild" :tag="video.Tag" :title="video.Titel" />
+            <SectionContentVideo v-for="video in this.videos" :key="video.id" :id="video.id" :image="video.attributes.Vorschaubild.data" :tag="video.attributes.Tag" :title="video.attributes.Titel" />
         </div>
 
         <div class="flex items-center justify-between w-full pb-5 mt-16 mb-8 border-b border-gray-200">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="grid grid-cols-12 gap-6">
-            <SectionContentBeitrag v-for="beitrag in this.beiträge" :key="beitrag.id" :id="beitrag.id" :image="beitrag.Beitragsbild" :title="beitrag.Titel" />   
+            <SectionContentBeitrag v-for="beitrag in this.beiträge" :key="beitrag.id" :id="beitrag.id" :image="beitrag.attributes.Beitragsbild.data[0]" :title="beitrag.attributes.Titel" />   
         </div>
 
         <div class="flex items-center justify-center w-full pb-1 mt-4 mb-6">
@@ -44,8 +44,10 @@ export default {
     }
     },
   created: async function () {
-    this.beiträge = await this.$strapi.find('Beitrags', {'_limit': 3, '_sort': 'created_at:DESC', 'populate': ['*']});
-    this.videos = await this.$strapi.find('Videos', {'_limit': 3, '_sort': 'veroeffentlicht:ASC', 'populate': ['*']});
+    const responseBeitraege = await this.$strapi.find('Beitrags', {'pagination[pageSize]': 3, 'sort': 'publishedAt:desc', 'populate': ['*']});
+    this.beiträge = responseBeitraege.data;
+    const responseVideos = await this.$strapi.find('Videos', {'pagination[pageSize]': 3, 'sort': 'veroeffentlicht:asc', 'populate': ['*']});
+    this.videos = responseVideos.data;
   }
 }
 </script>

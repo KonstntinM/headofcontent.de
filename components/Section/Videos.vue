@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-12 gap-6">
-    <SectionContentVideo v-for="video in this.braten" :key="video.id" :id="video.id" :image="video.Vorschaubild" :tag="video.Tag" :title="video.Titel" />
+    <SectionContentVideo v-for="video in this.braten" :key="video.id" :id="video.id" :image="video.attributes.Vorschaubild.data" :tag="video.attributes.Tag" :title="video.attributes.Titel" />
   </div>
 </template>
 
@@ -12,7 +12,8 @@ export default {
     }
     },
   created: async function () {
-    this.braten = await this.$strapi.find('Videos', {'_limit': 9, '_sort': 'veroeffentlicht:ASC', 'populate': ['*'] });
+    const responseBraten = await this.$strapi.find('Videos', {'_sort': 'veroeffentlicht:asc', 'populate': ['*'] });
+    this.braten = responseBraten.data;
   }
 }
 </script>
