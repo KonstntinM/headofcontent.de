@@ -40,7 +40,7 @@ export default {
   ],
 
   strapi: {
-    url: "https://cms.headofcontent.de/api",
+    url: "https://cms.headofcontent.de",
     entities: [
       'Beitrags',
       'Videos'
@@ -98,7 +98,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/strapi',
+    'nuxt2-strapi4',
     '@nuxtjs/markdownit',
     'hcaptcha-nuxt'
   ],
