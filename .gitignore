@@ -95,6 +95,7 @@ typings/
 .next
 
 # nuxt.js build output
+.nuxt/
 .nuxt
 
 # vuepress build output
@@ -170,3 +171,4 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/node,sublimetext,windows,macos,sass
 
 dist/
+dist
