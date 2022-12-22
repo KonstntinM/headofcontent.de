@@ -1,0 +1,60 @@
+name: Docker Image CD
+
+on:
+  release:
+    types: [published]
+
+jobs:
+
+ build :
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: 🐳 Build and bundle the Docker image
+        run: |
+          docker build . --file Dockerfile.prod --tag headofcontent.de:${{ github.event.release.tag_name }}
+          docker save headofcontent.de -o headofcontent.de_${{ github.event.release.tag_name }}.tar
+        
+      - name: 🌥 Attach Docker image to release assets
+        uses: AButler/upload-release-assets@v2.0
+        with:
+          files: '*.tar'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          release-tag: ${{ github.event.release.tag_name }}
+
+ deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+    
+    - name: 🖥 Open SSH Connection and Deploy Image
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+          # Enable Maintenance Mode
+          rm /etc/nginx/sites-enabled/headofcontent.de
+          ln -s /etc/nginx/sites-available/maintenance.headofcontent.de /etc/nginx/sites-enabled/
+          systemctl reload nginx
+          
+          # Pull, load and start image
+          cd headofcontent.de
+          docker stop headofcontent.de
+          docker rm headofcontent.de
+          docker image rm $(docker image ls --filter=reference='headofcontent.de:*' -q)
+          curl -L -H "Accept: application/octet-stream" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "X-GitHub-Api-Version: 2022-11-28" $(curl -s -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "X-GitHub-Api-Version: 2022-11-28" ${{ github.api_url }}/repos/${{ github.repository }}/releases/tags/${{ github.event.release.tag_name }} | jq -r ".assets[0].url") > headofcontent.de.tar
+          docker load -i ./headofcontent.de.tar
+          rm headofcontent.de.tar
+          sed -i 's/^IMAGE_VERSION=.*/IMAGE_VERSION=${{ github.event.release.tag_name }}/' .env
+          docker-compose up -d
+          
+          # Disable Maintenance Mode
+          rm /etc/nginx/sites-enabled/maintenance.headofcontent.de
+          ln -s /etc/nginx/sites-available/headofcontent.de /etc/nginx/sites-enabled/
+          systemctl reload nginx
+          
+        host: ${{ secrets.HOC_01_HOST }}
+        user: root
+        key: ${{ secrets.HOC_01_SSH_KEY}}
