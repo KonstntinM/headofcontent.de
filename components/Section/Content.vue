@@ -44,8 +44,8 @@ export default {
     }
     },
   created: async function () {
-    this.beiträge = await this.$strapi.find('Beitrags', {'_limit': 3, '_sort': 'created_at:DESC'});
-    this.videos = await this.$strapi.find('Videos', {'_limit': 3, '_sort': 'veroeffentlicht:ASC'});
+    this.beiträge = await this.$strapi.find('Beitrags', {'_limit': 3, '_sort': 'created_at:DESC', 'populate': ['*']});
+    this.videos = await this.$strapi.find('Videos', {'_limit': 3, '_sort': 'veroeffentlicht:ASC', 'populate': ['*']});
   }
 }
 </script>

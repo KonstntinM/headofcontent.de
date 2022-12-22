@@ -12,7 +12,7 @@ export default {
     }
     },
   created: async function () {
-    this.beiträge = await this.$strapi.find('Beitrags', {'_limit': 9, '_sort': 'published_at:DESC'});
+    this.beiträge = await this.$strapi.find('Beitrags', {'_limit': 9, '_sort': 'published_at:DESC', 'populate': ['*'] });
   }
 }
 </script>

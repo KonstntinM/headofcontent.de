@@ -12,7 +12,7 @@ export default {
     }
     },
   created: async function () {
-    this.braten = await this.$strapi.find('Videos', {'_limit': 9, '_sort': 'veroeffentlicht:ASC'});
+    this.braten = await this.$strapi.find('Videos', {'_limit': 9, '_sort': 'veroeffentlicht:ASC', 'populate': ['*'] });
   }
 }
 </script>
