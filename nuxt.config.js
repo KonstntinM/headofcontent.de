@@ -72,10 +72,6 @@ export default {
     },
   },
 
-  hcaptcha: {
-    siteKey: process.env.HCAPTCHA_SITEKEY
-  },
-
   optimizedImages: {
     optimizeImages: true
   },
@@ -99,8 +95,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/strapi',
-    '@nuxtjs/markdownit',
-    'hcaptcha-nuxt'
+    '@nuxtjs/markdownit'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
