@@ -1,21 +1,21 @@
 exports.ids = [13,7];
 exports.modules = {
 
-/***/ 54:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/nuxt/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/nuxt/node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Content/Video.vue?vue&type=template&id=c6d3621c&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Content/Video.vue?vue&type=template&id=c6d3621c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('NuxtLink',{staticClass:"relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4",attrs:{"to":'/videos/' + _vm.id}},[_c('a',{staticClass:"relative block w-full h-64 overflow-hidden rounded",attrs:{"href":"#_"}},[_c('img',{staticClass:"\n        object-cover object-center\n        w-full\n        h-full\n        transition\n        duration-500\n        ease-out\n        transform\n        scale-100\n        hover:scale-105\n      ",attrs:{"src":'https://cms.headofcontent.de' + _vm.image.formats.medium.url,"alt":_vm.image.alternativeText}})]),_vm._v(" "),_c('p',{staticClass:"text-xs font-bold text-gray-400 uppercase"},[_vm._v(_vm._s(_vm.tag))]),_vm._v(" "),_c('a',{staticClass:"\n      block\n      text-2xl\n      font-medium\n      leading-tight\n      text-gray-700\n      hover:text-gray-900\n    ",attrs:{"href":"#_"}},[_vm._v(_vm._s(_vm.title))])])}
 var staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./components/Section/Content/Video.vue?vue&type=template&id=c6d3621c&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!/usr/local/lib/node_modules/nuxt/node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Content/Video.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Content/Video.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -88,7 +88,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "1feb1b48"
+  "9e1fc2ae"
   
 )
 
@@ -96,21 +96,21 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 73:
+/***/ 72:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/nuxt/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/nuxt/node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Videos.vue?vue&type=template&id=25c2e308&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Videos.vue?vue&type=template&id=25c2e308&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"grid grid-cols-12 gap-6"},_vm._l((this.braten),function(video){return _c('SectionContentVideo',{key:video.id,attrs:{"id":video.id,"image":video.Vorschaubild,"tag":video.Tag,"title":video.Titel}})}),1)}
 var staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./components/Section/Videos.vue?vue&type=template&id=25c2e308&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!/usr/local/lib/node_modules/nuxt/node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Videos.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Videos.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -153,14 +153,14 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "0758c7d1"
+  "5ed8a824"
   
 )
 
 /* harmony default export */ var Videos = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {SectionContentVideo: __webpack_require__(54).default})
+installComponents(component, {SectionContentVideo: __webpack_require__(53).default})
 
 
 /***/ })

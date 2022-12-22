@@ -35,11 +35,11 @@
   "SectionContentVideo": {
     "description": "Auto imported from components/Section/Content/Video.vue"
   },
-  "SectionHeroTrailer": {
-    "description": "Auto imported from components/Section/Hero/Trailer.vue"
-  },
   "SectionTeamMember": {
     "description": "Auto imported from components/Section/Team/Member.vue"
+  },
+  "SectionHeroTrailer": {
+    "description": "Auto imported from components/Section/Hero/Trailer.vue"
   },
   "SectionContentNavigationBeitrag": {
     "description": "Auto imported from components/Section/Content/Navigation/Beitrag.vue"

@@ -10,8 +10,8 @@ export const SectionVideos = () => import('../../components/Section/Videos.vue' 
 export const SectionÜberUns = () => import('../../components/Section/ÜberUns.vue' /* webpackChunkName: "components/sectionüber-uns" */).then(c => wrapFunctional(c.default || c))
 export const SectionContentBeitrag = () => import('../../components/Section/Content/Beitrag.vue' /* webpackChunkName: "components/section-content-beitrag" */).then(c => wrapFunctional(c.default || c))
 export const SectionContentVideo = () => import('../../components/Section/Content/Video.vue' /* webpackChunkName: "components/section-content-video" */).then(c => wrapFunctional(c.default || c))
-export const SectionHeroTrailer = () => import('../../components/Section/Hero/Trailer.vue' /* webpackChunkName: "components/section-hero-trailer" */).then(c => wrapFunctional(c.default || c))
 export const SectionTeamMember = () => import('../../components/Section/Team/Member.vue' /* webpackChunkName: "components/section-team-member" */).then(c => wrapFunctional(c.default || c))
+export const SectionHeroTrailer = () => import('../../components/Section/Hero/Trailer.vue' /* webpackChunkName: "components/section-hero-trailer" */).then(c => wrapFunctional(c.default || c))
 export const SectionContentNavigationBeitrag = () => import('../../components/Section/Content/Navigation/Beitrag.vue' /* webpackChunkName: "components/section-content-navigation-beitrag" */).then(c => wrapFunctional(c.default || c))
 export const SectionContentNavigationVideo = () => import('../../components/Section/Content/Navigation/Video.vue' /* webpackChunkName: "components/section-content-navigation-video" */).then(c => wrapFunctional(c.default || c))
 

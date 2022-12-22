@@ -1,7 +1,6 @@
 {
   "entry": "server.js",
   "files": {
-    "23.js": "23.js",
     "components/section-beiträge.js": "components/section-beiträge.js",
     "components/section-call-to-action.js": "components/section-call-to-action.js",
     "components/section-content-beitrag.js": "components/section-content-beitrag.js",
@@ -27,7 +26,6 @@
     "server.js": "server.js"
   },
   "maps": {
-    "23.js": "23.js.map",
     "components/section-beiträge.js": "components/section-beiträge.js.map",
     "components/section-call-to-action.js": "components/section-call-to-action.js.map",
     "components/section-content-beitrag.js": "components/section-content-beitrag.js.map",

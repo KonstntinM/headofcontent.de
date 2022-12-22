@@ -3,56 +3,48 @@
     "name": "aktuelles",
     "path": "/aktuelles",
     "component": "/Users/konstantinmarx/Desktop/Programmieren/GitHub/headofcontent.de/pages/aktuelles/index.vue",
-    "chunkName": "pages/aktuelles/index",
-    "_name": "_d7cc6bfc"
+    "chunkName": "pages/aktuelles/index"
   },
   {
     "name": "datenschutzerklärung",
     "path": "/datenschutzerkl%C3%A4rung",
     "component": "/Users/konstantinmarx/Desktop/Programmieren/GitHub/headofcontent.de/pages/datenschutzerklärung/index.vue",
-    "chunkName": "pages/datenschutzerklärung/index",
-    "_name": "_ac9a91aa"
+    "chunkName": "pages/datenschutzerklärung/index"
   },
   {
     "name": "impressum",
     "path": "/impressum",
     "component": "/Users/konstantinmarx/Desktop/Programmieren/GitHub/headofcontent.de/pages/impressum/index.vue",
-    "chunkName": "pages/impressum/index",
-    "_name": "_539760f1"
+    "chunkName": "pages/impressum/index"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "/Users/konstantinmarx/Desktop/Programmieren/GitHub/headofcontent.de/pages/login/index.vue",
-    "chunkName": "pages/login/index",
-    "_name": "_9ba93e3a"
+    "chunkName": "pages/login/index"
   },
   {
     "name": "videos",
     "path": "/videos",
     "component": "/Users/konstantinmarx/Desktop/Programmieren/GitHub/headofcontent.de/pages/videos/index.vue",
-    "chunkName": "pages/videos/index",
-    "_name": "_07e76298"
+    "chunkName": "pages/videos/index"
   },
   {
     "name": "aktuelles-id",
     "path": "/aktuelles/:id",
     "component": "/Users/konstantinmarx/Desktop/Programmieren/GitHub/headofcontent.de/pages/aktuelles/_id.vue",
-    "chunkName": "pages/aktuelles/_id",
-    "_name": "_cf93362c"
+    "chunkName": "pages/aktuelles/_id"
   },
   {
     "name": "videos-id",
     "path": "/videos/:id",
     "component": "/Users/konstantinmarx/Desktop/Programmieren/GitHub/headofcontent.de/pages/videos/_id.vue",
-    "chunkName": "pages/videos/_id",
-    "_name": "_97f323c8"
+    "chunkName": "pages/videos/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/konstantinmarx/Desktop/Programmieren/GitHub/headofcontent.de/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_52027f49"
+    "chunkName": "pages/index"
   }
 ]

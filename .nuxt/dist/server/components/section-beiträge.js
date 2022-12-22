@@ -1,21 +1,21 @@
 exports.ids = [1,4];
 exports.modules = {
 
-/***/ 53:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/nuxt/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/nuxt/node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Content/Beitrag.vue?vue&type=template&id=328d39ba&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Content/Beitrag.vue?vue&type=template&id=328d39ba&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('NuxtLink',{staticClass:"relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4",attrs:{"to":'/aktuelles/' + _vm.id}},[_c('a',{staticClass:"relative block w-full h-64 overflow-hidden rounded",attrs:{"href":"#_"}},[_c('img',{staticClass:"object-cover object-center w-full h-full transition duration-500 ease-out transform scale-100 hover:scale-105",attrs:{"src":'https://cms.headofcontent.de' + _vm.image.formats.medium.url,"alt":_vm.image.alternativeText}})]),_vm._v(" "),_c('p',{staticClass:"text-xs font-bold text-gray-400 uppercase"},[_vm._v("Beitrag")]),_vm._v(" "),_c('a',{staticClass:"block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900",attrs:{"href":"#_"}},[_vm._v(_vm._s(_vm.title))])])}
 var staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./components/Section/Content/Beitrag.vue?vue&type=template&id=328d39ba&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!/usr/local/lib/node_modules/nuxt/node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Content/Beitrag.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Content/Beitrag.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -56,7 +56,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "d6fc466a"
+  "9aa4ac50"
   
 )
 
@@ -64,21 +64,21 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 71:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: /usr/local/lib/node_modules/nuxt/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/local/lib/node_modules/nuxt/node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Beiträge.vue?vue&type=template&id=003c872e&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Beiträge.vue?vue&type=template&id=003c872e&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"grid grid-cols-12 gap-6"},_vm._l((this.beiträge),function(beitrag){return _c('SectionContentBeitrag',{key:beitrag.id,attrs:{"id":beitrag.id,"image":beitrag.Beitragsbild,"title":beitrag.Titel}})}),1)}
 var staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./components/Section/Beiträge.vue?vue&type=template&id=003c872e&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!/usr/local/lib/node_modules/nuxt/node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Beiträge.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Section/Beiträge.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -121,14 +121,14 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "0dbc79f7"
+  "f674dcec"
   
 )
 
 /* harmony default export */ var Beitr_ge = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {SectionContentBeitrag: __webpack_require__(53).default})
+installComponents(component, {SectionContentBeitrag: __webpack_require__(52).default})
 
 
 /***/ })

@@ -18,7 +18,7 @@ You can directly use them in pages and other components without the need to impo
 - `<SectionÜberUns>` | `<sectionüber-uns>` (components/Section/ÜberUns.vue)
 - `<SectionContentBeitrag>` | `<section-content-beitrag>` (components/Section/Content/Beitrag.vue)
 - `<SectionContentVideo>` | `<section-content-video>` (components/Section/Content/Video.vue)
-- `<SectionHeroTrailer>` | `<section-hero-trailer>` (components/Section/Hero/Trailer.vue)
 - `<SectionTeamMember>` | `<section-team-member>` (components/Section/Team/Member.vue)
+- `<SectionHeroTrailer>` | `<section-hero-trailer>` (components/Section/Hero/Trailer.vue)
 - `<SectionContentNavigationBeitrag>` | `<section-content-navigation-beitrag>` (components/Section/Content/Navigation/Beitrag.vue)
 - `<SectionContentNavigationVideo>` | `<section-content-navigation-video>` (components/Section/Content/Navigation/Video.vue)

@@ -26,6 +26,11 @@
       "content": "Head of Content"
     },
     {
+      "hid": "description",
+      "name": "description",
+      "content": "Webseite der unabhänigen Jugendredaktion 'Head of Content' aus Berlin"
+    },
+    {
       "hid": "og:type",
       "name": "og:type",
       "property": "og:type",
@@ -42,6 +47,12 @@
       "name": "og:site_name",
       "property": "og:site_name",
       "content": "Head of Content"
+    },
+    {
+      "hid": "og:description",
+      "name": "og:description",
+      "property": "og:description",
+      "content": "Webseite der unabhänigen Jugendredaktion 'Head of Content' aus Berlin"
     },
     {
       "hid": "og:url",
@@ -88,7 +99,7 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.b87da005.webmanifest",
+      "href": "/_nuxt/manifest.70e5428d.webmanifest",
       "hid": "manifest"
     }
   ],

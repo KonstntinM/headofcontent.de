@@ -13,7 +13,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_c136d4c2 from 'nuxt_plugin_plugin_c136d4c2' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_hcaptcha_4bd181b1 from 'nuxt_plugin_hcaptcha_4bd181b1' // Source: ./hcaptcha.js (mode: 'all')
 import nuxt_plugin_markdownit_219afc69 from 'nuxt_plugin_markdownit_219afc69' // Source: ./markdownit.js (mode: 'all')
 import nuxt_plugin_cookieuniversalnuxt_70d18cdd from 'nuxt_plugin_cookieuniversalnuxt_70d18cdd' // Source: ./cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_httpserver_8e559f3c from 'nuxt_plugin_httpserver_8e559f3c' // Source: ./http.server.js (mode: 'server')
@@ -73,7 +72,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Head of Content","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Webseite der unabhänigen Jugendredaktion \"Head of Content\" aus Berlin"},{"lang":"de"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"script":[{"src":"https:\u002F\u002Fplausible.io\u002Fjs\u002Fplausible.js","data-domain":"headofcontent.de","defer":true},{"src":"https:\u002F\u002Fanalytics.headofcontent.de\u002Fjs\u002Fplausible.js","data-domain":"headofcontent.de","defer":true,"async":true}],"style":[]},
+    head: {"title":"Head of Content","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"An Berichterstattung zu aktueller Politik mangelt es nicht im Internet. Hunderte Nachrichtenseiten kämpfen mit YouTube-Videos und Blogs um die Aufmerksamkeit der Nutzer:innen. Doch eine Sache hat uns bisher gefehlt: Die Perspektive junger Menschen. Wir sind hier, um das zu ändern!"},{"lang":"de"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"script":[{"src":"https:\u002F\u002Fanalytics.headofcontent.de\u002Fjs\u002Fplausible.js","data-domain":"headofcontent.de","defer":true,"async":true}],"style":[]},
 
     router,
     nuxt: {
@@ -189,10 +188,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_c136d4c2 === 'function') {
     await nuxt_plugin_plugin_c136d4c2(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_hcaptcha_4bd181b1 === 'function') {
-    await nuxt_plugin_hcaptcha_4bd181b1(app.context, inject)
   }
 
   if (typeof nuxt_plugin_markdownit_219afc69 === 'function') {
