@@ -40,7 +40,7 @@ export default {
   ],
 
   strapi: {
-    url: "https://cms.headofcontent.de",
+    url: "https://cms.headofcontent.de/api",
     entities: [
       'Beitrags',
       'Videos'
