@@ -41,8 +41,8 @@ jobs:
           
           # Pull, load and start image
           cd headofcontent.de
-          docker stop headofcontent.de
-          docker rm headofcontent.de
+          docker stop headofcontent-de
+          docker rm headofcontent-de
           docker image rm $(docker image ls --filter=reference='headofcontent.de:*' -q)
           curl -L -H "Accept: application/octet-stream" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "X-GitHub-Api-Version: 2022-11-28" $(curl -s -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "X-GitHub-Api-Version: 2022-11-28" ${{ github.api_url }}/repos/${{ github.repository }}/releases/tags/${{ github.event.release.tag_name }} | jq -r ".assets[0].url") > headofcontent.de.tar
           docker load -i ./headofcontent.de.tar
