@@ -1,7 +1,7 @@
 {
   "name": "headofcontent.de",
   "description": "Webseite der unabhänigen Jugendredaktion 'Head of Content' aus Berlin",
-  "version": "1.0.0",
+  "version": "2.1",
   "private": true,
   "scripts": {
     "dev": "nuxt",
