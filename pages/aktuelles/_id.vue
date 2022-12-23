@@ -13,7 +13,7 @@
             leading-7
           "
         >
-          {{ this.beitrag.Titel }}
+          {{ this.beitrag.attributes.Titel }}
         </h3>
         <p
           class="
@@ -28,11 +28,11 @@
             lg:mb-0
           "
         >
-          Veröffentlicht am {{ this.beitrag.veroeffentlicht }}
+          Veröffentlicht am {{ this.beitrag.attributes.veroeffentlicht }}
         </p>
         <div class="my-2 border-b border-gray-300 lg:my-5"></div>
         <div
-          v-html="$md.render(this.beitrag.Inhalt)"
+          v-html="$md.render(this.beitrag.attributes.Inhalt)"
           class="
             col-span-6
             text-base
@@ -52,16 +52,17 @@
 export default {
     data: function () {
     return {
-      beitrag: { Inhalt: "" }
+      beitrag: { attributes: { Inhalt: "" }}
     };
   },
   created: async function () {
-    this.beitrag = await this.$strapi.findOne("Beitrags", this.$route.params.id);
+    const responseBeitraege = await this.$strapi.findOne("Beitrags", this.$route.params.id);
+    this.beitrag = responseBeitraege.data;
     
-    var veroeffentlichungsdatum = this.beitrag.veroeffentlicht || this.beitrag.published_at
+    var veroeffentlichungsdatum = this.beitrag.attributes.veroeffentlicht || this.beitrag.attributes.publishedAt;
 
     var veroeffentlicht_am = new Date(veroeffentlichungsdatum);
-    this.beitrag.veroeffentlicht = veroeffentlicht_am.toLocaleString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    this.beitrag.attributes.veroeffentlicht = veroeffentlicht_am.toLocaleString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
   },
 };
 </script>

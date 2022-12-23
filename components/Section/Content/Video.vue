@@ -16,8 +16,8 @@
           scale-100
           hover:scale-105
         "
-        :src="'https://cms.headofcontent.de' + image.formats.medium.url"
-        :alt="image.alternativeText"
+        :src="'https://cms.headofcontent.de' + image.attributes.formats.medium.url"
+        :alt="image.attributes.alternativeText"
       />
     </a>
     <p class="text-xs font-bold text-gray-400 uppercase">{{ tag }}</p>
