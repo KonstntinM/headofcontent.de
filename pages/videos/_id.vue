@@ -2,7 +2,7 @@
   <div>
     <iframe
       class="w-full h-144"
-      :src="this.video.Video"
+      :src="this.video.attributes.Video"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
@@ -20,7 +20,7 @@
             leading-7
           "
         >
-          {{ this.video.Titel }}
+          {{ this.video.attributes.Titel }}
         </h3>
         <p
           class="
@@ -35,11 +35,11 @@
             lg:mb-0
           "
         >
-          Veröffentlicht am {{ this.video.veroeffentlicht }}
+          Veröffentlicht am {{ this.video.attributes.veroeffentlicht }}
         </p>
         <div class="my-2 border-b border-gray-300 lg:my-5"></div>
         <div
-          v-html="$md.render(this.video.Beschreibung)"
+          v-html="$md.render(this.video.attributes.Beschreibung)"
           class="
             col-span-6
             text-base
@@ -59,16 +59,19 @@
 export default {
   data: function () {
     return {
-      video: { Beschreibung: "" },
+      video: { attributes: { Beschreibung: "" } },
     };
   },
   created: async function () {
-    this.video = await this.$strapi.findOne("Videos", this.$route.params.id);
+    const { data } = await this.$strapi.findOne("Videos", this.$route.params.id);
+    this.video = data;
 
-    var veroeffentlichungsdatum = this.video.veroeffentlicht || this.video.published_at
+    console.log(this.video)
+
+    var veroeffentlichungsdatum = this.video.attributes.veroeffentlicht || this.video.attributes.publishedAt
 
     var veroeffentlicht_am = new Date(veroeffentlichungsdatum);
-    this.video.veroeffentlicht = veroeffentlicht_am.toLocaleString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    this.video.attributes.veroeffentlicht = veroeffentlicht_am.toLocaleString('de-DE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
   },
 };
 </script>

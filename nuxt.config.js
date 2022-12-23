@@ -94,7 +94,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/strapi',
+    'nuxt2-strapi4',
     '@nuxtjs/markdownit'
   ],
 

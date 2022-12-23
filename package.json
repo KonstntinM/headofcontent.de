@@ -15,11 +15,11 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/markdownit": "^2.0.0",
-    "@nuxtjs/strapi": "^0.3.4",
     "core-js": "^3.19.3",
     "markdown-it-attrs": "^4.1.0",
     "markdown-it-div": "^1.1.0",
     "nuxt": "^2.15.8",
+    "nuxt2-strapi4": "^2022.0.1",
     "vue-loading-skeleton": "^1.1.9",
     "vue-markdown": "^2.2.4"
   },
