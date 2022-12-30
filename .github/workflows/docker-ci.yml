@@ -1,0 +1,22 @@
+name: Docker Image CD
+
+on:
+  pull_request:
+    branches: ['main']
+
+jobs:
+
+  build :
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: 🐳 Install Dependencies
+        run: yarn install
+
+      - name: 🚧 Build Application
+        run: yarn build
+
+      - name: 🛫 Start Application
+        run: yarn start
