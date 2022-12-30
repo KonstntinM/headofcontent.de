@@ -1,8 +1,9 @@
-name: Docker Image CD
+name: Docker Image CI
 
 on:
   pull_request:
-    branches: ['main']
+    branches:
+      - main
 
 jobs:
 
