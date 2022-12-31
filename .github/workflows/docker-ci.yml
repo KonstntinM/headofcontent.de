@@ -19,5 +19,6 @@ jobs:
       - name: 🚧 Build Application
         run: yarn build
 
-      - name: 🛫 Start Application
-        run: yarn start
+      - uses: cypress-io/github-action@v5.0.2
+        with:
+          start: yarn start
