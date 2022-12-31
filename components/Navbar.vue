@@ -14,10 +14,9 @@
                 <NuxtLink :to="{ path: '/',hash:'#kontakt'}" class="font-medium leading-6 text-gray-600 md:mr-6 hover:text-gray-900">Kontakt</NuxtLink>
             </nav>
             <div class="inline-flex items-center justify-center ml-5 space-x-4 md:space-x-10 md:justify-end">
-                <NuxtLink to="/login" class="text-base font-medium leading-6 text-gray-600 whitespace-no-wrap transition duration-150 ease-in-out hover:text-gray-900">
+                <a href="https://cloud.headofcontent.de/" target="_blank" class="text-base font-medium leading-6 text-gray-600 whitespace-no-wrap transition duration-150 ease-in-out hover:text-gray-900 cursor-pointer">
                     Login
-                </NuxtLink>
-                
+                </a>
             </div>
         </div>
     </div>
