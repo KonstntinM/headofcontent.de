@@ -9,7 +9,7 @@
             </NuxtLink>
         </div>
 
-        <div class="grid grid-cols-12 gap-6">
+        <div id="current-videos" class="grid grid-cols-12 gap-6">
             <SectionContentVideo v-for="video in this.videos" :key="video.id" :id="video.id" :image="video.attributes.Vorschaubild.data" :tag="video.attributes.Tag" :title="video.attributes.Titel" />
         </div>
 
@@ -21,7 +21,7 @@
             </NuxtLink>
         </div>
 
-        <div class="grid grid-cols-12 gap-6">
+        <div id="latest-posts" class="grid grid-cols-12 gap-6">
             <SectionContentBeitrag v-for="beitrag in this.beiträge" :key="beitrag.id" :id="beitrag.id" :image="beitrag.attributes.Beitragsbild.data[0]" :title="beitrag.attributes.Titel" />   
         </div>
 
