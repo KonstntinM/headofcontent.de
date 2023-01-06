@@ -4,7 +4,7 @@
     class="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4"
   >
     <a href="#_" class="relative block w-full h-64 overflow-hidden rounded">
-      <img
+      <nuxt-img
         class="
           object-cover object-center
           w-full
