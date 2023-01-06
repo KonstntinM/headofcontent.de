@@ -1,7 +1,7 @@
 <template>
 <div class="space-y-6 text-center lg:ml-0 md:ml-10 ">
                     <div class="relative w-48 h-48 p-2 mx-auto md:w-56 md:h-56">
-                        <img class="relative z-20 w-full h-full rounded-xl" :src="bild" alt="">
+                        <nuxt-img class="relative z-20 w-full h-full rounded-xl" :src="bild" alt="" />
                         <svg class="absolute inset-0 w-full h-full transform scale-150 fill-current opacity-10" :class="farbe" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path :d="hintergrundForm" transform="translate(100 100)"></path></svg>
                     </div>
                     <div class="space-y-2">
@@ -28,7 +28,7 @@ export default {
         bild: {
             type: String,
             required: false,
-            default: require('~/assets/HOC_Team_Platzhalter.png')
+            default: '/HOC_Team_Platzhalter.png'
         },
         bereich: String,
         farbe: String,

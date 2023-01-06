@@ -13,7 +13,7 @@
         </div>
         <div class="relative w-full px-5 rounded-lg lg:w-1/2 group xl:px-0">
             <div class="trailer relative overflow-hidden rounded-md shadow-2xl cursor-pointer group cursor-pointer">
-                <img src="~/assets/Lost-Connection.png" class="z-10 object-cover w-full h-full">
+                <nuxt-img src="/Lost-Connection.png" class="z-10 object-cover w-full h-full" />
             </div>
         </div>
     </div>

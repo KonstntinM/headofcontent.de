@@ -3,7 +3,7 @@
     <div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
 
         <NuxtLink to="/" class="flex items-center order-first mb-4 font-medium text-gray-900 lg:order-none lg:w-auto title-font lg:items-center lg:justify-center md:mb-0">
-            <img src="~/assets/HOC_Logo_Entwurf-01.png" alt="Head of Content" class="logo mt-1" />
+            <nuxt-img src="/HOC_Logo_Entwurf-01.png" alt="Head of Content" class="logo mt-1" />
         </NuxtLink>
 
         <div class="relative flex flex-col md:flex-row">
