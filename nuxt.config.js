@@ -95,7 +95,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt2-strapi4',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxt/image'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
