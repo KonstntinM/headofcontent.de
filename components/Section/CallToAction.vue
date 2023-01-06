@@ -97,8 +97,8 @@
         </div>
       </div>
       <div class="bottom-0 right-0 mb-0 mr-3 lg:absolute lg:-mb-12">
-        <img
-          :src="require('~/assets/cta-1.png')"
+        <nuxt-img
+          src="/cta-1.png"
           class="
             max-w-xs
             mb-4
