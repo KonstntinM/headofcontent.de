@@ -1,7 +1,7 @@
 {
   "name": "headofcontent.de",
   "description": "Webseite der unabhänigen Jugendredaktion 'Head of Content' aus Berlin",
-  "version": "1.0.0",
+  "version": "2.1",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -13,14 +13,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxt/image": "^0.7.1",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/markdownit": "^2.0.0",
-    "@nuxtjs/strapi": "^0.3.4",
     "core-js": "^3.19.3",
-    "hcaptcha-nuxt": "^1.0.1",
     "markdown-it-attrs": "^4.1.0",
     "markdown-it-div": "^1.1.0",
     "nuxt": "^2.15.8",
+    "nuxt2-strapi4": "^2022.0.1",
     "vue-loading-skeleton": "^1.1.9",
     "vue-markdown": "^2.2.4"
   },
@@ -34,6 +34,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.5.0",
+    "cypress": "^12.2.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^9.0.0",

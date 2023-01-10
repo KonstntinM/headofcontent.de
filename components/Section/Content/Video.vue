@@ -4,7 +4,7 @@
     class="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4"
   >
     <a href="#_" class="relative block w-full h-64 overflow-hidden rounded">
-      <img
+      <nuxt-img
         class="
           object-cover object-center
           w-full
@@ -16,8 +16,8 @@
           scale-100
           hover:scale-105
         "
-        :src="'https://cms.headofcontent.de' + image.formats.medium.url"
-        :alt="image.alternativeText"
+        :src="'https://cms.headofcontent.de' + image.attributes.formats.medium.url"
+        :alt="image.attributes.alternativeText"
       />
     </a>
     <p class="text-xs font-bold text-gray-400 uppercase">{{ tag }}</p>

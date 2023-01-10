@@ -17,7 +17,14 @@
                                 <svg class="w-auto h-8 ml-1 text-white fill-current" viewBox="0 0 52 66"><path d="M50 30.7L4.1.6C2.6-.4.8.9.8 2.9v60.3c0 2 1.8 3.3 3.3 2.3L50 35.3c1.5-1 1.5-3.6 0-4.6z" fill-rule="nonzero"></path></svg>
                             </span>
                         </div>
-                        <img src="~/assets/HOC_Hero_Image-01_Platzhalter.png" alt="Vorschaubild des Head of Content Kanaltrailers" class="z-10 object-cover w-full h-full">
+                        <nuxt-img
+                            src="/HOC_Hero_Image-01_Platzhalter.png"
+                            alt="Vorschaubild des Head of Content Kanaltrailers"
+                            class="z-10 object-cover w-full h-full"
+                            :placeholder="[960, 524, 50]"
+                            width="960"
+                            height="523,6"
+                        />
                     </div>
             </div>
         </div>

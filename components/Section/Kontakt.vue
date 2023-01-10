@@ -39,7 +39,9 @@ export default {
   methods: {
     async send() {
 
-      const emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      this.error = "Irgendetwas ist schief gelaufen. Das war unser Fehler! Bitte kontaktiere uns direkt über unsere E-Mailadresse (s. oben)."
+
+      /*const emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
       // add captcha check!
 
@@ -47,19 +49,11 @@ export default {
         return this.error = "Bitte überprüfe deine Angaben und versuche es erneut."
       }
 
-      var hCaptchaToken = await this.$hcaptcha.getResponse();
-
-      if (!hCaptchaToken) {
-        return this.error = "Bitte löse das CAPTCHA und versuche es erneut."
-      }
-      
-      else {
-        try {
+      try {
           var response = await this.$axios.$post('https://mail.headofcontent.de/send-mail', {
             name: this.name,
             absender: this.email,
             nachricht: this.message,
-            hCaptcha: hCaptchaToken
           })
 
           if (response.stauts == 200) {
@@ -71,12 +65,11 @@ export default {
           } else {
             this.error = response.message
           }
-        } catch {
+      } catch {
           this.error = "Irgendetwas ist schief gelaufen. Das geht auf unsere Kappe! Bitte kontaktiere uns direkt über unsere E-Mailadresse (s. oben)."
-        }
-
-        plausible('Kontaktanfrage');
-      }
+      }*/
+      
+      plausible('Kontaktanfrage');
     }
   }
 }
