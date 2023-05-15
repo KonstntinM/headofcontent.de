@@ -1,0 +1,27 @@
+---
+export interface Props {
+    href: string;
+    thumbnail: string
+    tag: string
+    title: string
+}
+
+const {href, thumbnail, tag ,title } = Astro.props;
+
+import { Picture } from '@astrojs/image/components';
+---
+
+<a href={href} class="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4 group">
+        <Picture
+            class="relative block w-full overflow-hidden rounded transition duration-500 ease-out transform scale-100 group-hover:scale-105"
+            src={import(/* @vite-ignore */ "./content/images/" + thumbnail)}
+            alt={"Thumbnail zu " + title}
+            sizes={"400, 800, 1200"}
+            widths={[400, 800, 1200]}
+            background={"#f3f4f6"}
+            fit={"cover"}
+            aspectRatio={13 / 9}
+        />
+        <p class="text-xs font-bold text-gray-400 uppercase">{tag}</p>
+        <h3 class="block text-2xl font-medium leading-tight text-gray-700 hover:text-gray-900 line-clamp-3">{ title }</h3> 
+</a>

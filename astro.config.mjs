@@ -6,5 +6,7 @@ import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 
 export default defineConfig({
-  integrations: [vue(), tailwind(), image()],
+  integrations: [vue(), tailwind(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  })],
 });

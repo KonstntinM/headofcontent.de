@@ -8,7 +8,7 @@
                 </a>
             </div>
             <div class="px-5 py-2">
-                <a href="/videos" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                <a href="https://www.youtube.com/@headofcontent6494" target="_blank" class="text-base leading-6 text-gray-500 hover:text-gray-900">
                     Videos
                 </a>
             </div>
@@ -78,5 +78,9 @@ export default {
 
 .icon:hover {
     fill: rgb(156, 163, 175)
+}
+
+a{
+    @apply text-gray-400 !important;
 }
 </style>
