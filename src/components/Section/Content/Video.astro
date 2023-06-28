@@ -14,7 +14,7 @@ import { Picture } from '@astrojs/image/components';
 <a href={href} class="relative col-span-12 mb-10 space-y-4 md:col-span-6 lg:col-span-4 group">
         <Picture
             class="relative block w-full overflow-hidden rounded transition duration-500 ease-out transform scale-100 group-hover:scale-105"
-            src={import(/* @vite-ignore */ "./content/images/" + thumbnail)}
+            src={"/images/" + thumbnail}
             alt={"Thumbnail zu " + title}
             sizes={"400, 800, 1200"}
             widths={[400, 800, 1200]}

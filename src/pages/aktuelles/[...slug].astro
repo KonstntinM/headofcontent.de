@@ -23,7 +23,7 @@ const { post } = Astro.props;
       <div class="flex flex-col max-w-3xl mx-auto">
         <Picture
             class="relative block h-72 overflow-hidden rounded transition duration-500 ease-out transform scale-100 group-hover:scale-105"
-            src={import(/* @vite-ignore */ "../../content/images/" + post.frontmatter.image )}
+            src={"/images/" + post.frontmatter.image }
             alt={"Bild zu " + post.frontmatter.titel }
             sizes={"400, 800, 1200"}
             widths={[400, 800, 1200]}
