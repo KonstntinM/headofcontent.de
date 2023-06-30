@@ -1,4 +1,4 @@
-FROM node:lts AS build
+FROM node:lts-bullseye-slim AS build
 RUN npm i -g pnpm
 
 WORKDIR /app
