@@ -24,4 +24,4 @@ jobs:
         with:
           install: false
           wait-on: 'http://localhost:80'
-          command: npm cypress run --env host=http://localhost:80
+          command: npx cypress run --env host=http://localhost:80
