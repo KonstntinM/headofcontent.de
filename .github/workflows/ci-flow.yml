@@ -21,8 +21,7 @@ jobs:
 
       - name: Cypress run with env
         uses: cypress-io/github-action@v5
-        env:
-          CYPRESS_host: 127.0.0.1
-          CYPRESS_port: 80
         with:
-          spec: cypress/e2e/**/*.cy.js
+          install: false
+          wait-on: 'http://localhost:80'
+          command: npm cypress run --env host=http://localhost:80
