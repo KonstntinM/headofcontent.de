@@ -19,6 +19,9 @@ jobs:
       - name: 🚧 Spin Up Application Container
         run: docker run -d -p 80:80 headofcontent.de
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Cypress run with env
         uses: cypress-io/github-action@v5
         with:
