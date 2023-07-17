@@ -17,17 +17,17 @@ jobs:
         run: docker build . --tag headofcontent.de
 
       - name: 🚧 Spin Up Application Container
-        run: docker run -d -p 80:80 headofcontent.de
+        run: docker run -d -p 3000:80 headofcontent.de
 
       - name: ⬇️ Download dependencies
         run: |
           npm install -g pnpm
           pnpm install
 
-      - name: Cypress run with env
+      - name: Run test with Cypress
         uses: cypress-io/github-action@v5
         with:
           install: false
           wait-on: 'http://localhost:80'
           configFile: cypress.config.cjs
-          command: npx cypress run --env host=http://localhost:80
+          command: npx cypress run
