@@ -3,7 +3,7 @@ RUN npm i -g pnpm
 
 WORKDIR /app
 COPY . .
-RUN pnpm i --prod
+RUN pnpm i
 RUN pnpm run build
 
 FROM httpd:2.4 AS runtime
