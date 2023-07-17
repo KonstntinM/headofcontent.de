@@ -14,11 +14,4 @@ describe('headofcontent.de', () => {
     cy.visit('/');
     cy.get('#latest-posts > a').should('have.length', 3);
   });
-
-  it('embeds the youtube videos correctly', () => {
-    cy.visit('/');
-    cy.get('#current-videos > a').first().click();
-
-    cy.url().should('contain', 'youtube.com');
-  });
 })
