@@ -1,0 +1,32 @@
+---
+export interface Props {
+	name: string,
+    bild: any,
+    bereich: string,
+    farbe: string,
+    hintergrundForm: string
+}
+
+const { name, bild, bereich, farbe, hintergrundForm } = Astro.props;
+
+import { Image } from '@astrojs/image/components';
+---
+
+<div class="space-y-6 text-center lg:ml-0 md:ml-10 ">
+    <div class="relative w-48 h-48 p-2 mx-auto md:w-56 md:h-56">
+        <Image
+            class="relative z-20 w-full h-full rounded-xl"
+            src={bild}
+            alt={"Profilbild von " + name}
+            width={500}
+            height={500}
+        />
+        <svg class={ "absolute inset-0 w-full h-full transform scale-150 fill-current opacity-50 " + farbe } viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d={hintergrundForm} transform="translate(100 100)"></path></svg>
+    </div>
+    <div class="space-y-2">
+        <div class="space-y-1 text-lg font-medium leading-6">
+            <h3>{ name }</h3>
+            <p class={farbe}> { bereich }</p>
+        </div>
+    </div>
+</div>

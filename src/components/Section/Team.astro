@@ -1,0 +1,32 @@
+---
+import SectionTeamMember from './Team/Member.astro'
+
+import TeamMemberProfilbildPlatzhalter from '../../static/HOC_Team_Platzhalter.webp'
+
+import TeamMemberProfilbildGustav from '../../static/HOC_Team_Gustav.webp'
+import TeamMemberProfilbildLolan from '../../static/HOC_Team_Lolan.webp'
+import TeamMemberProfilbildMarek from '../../static/HOC_Team_Marek.png'
+import TeamMemberProfilbildKonstantin from '../../static/HOC_Team_Konstantin.webp'
+
+---
+
+<section class="w-full py-16 bg-white lg:py-24">
+    <div class="px-12 mx-auto text-center max-w-7xl">
+        <div class="space-y-12 md:text-left">
+            <div class="mb-20 space-y-5 sm:mx-auto sm:max-w-xl md:max-w-2xl sm:space-y-4 lg:max-w-5xl">
+                <h2 class="relative text-4xl font-extrabold tracking-tight sm:text-5xl">Unser Team 👋</h2>
+                <p class="text-xl text-gray-500">Wir sind das Team von Head of Content. Jede Woche diskutieren wir aufs neue, welche Themen gerade aktuell und spannend sind. Du hast Lust mitzumachen? Dann schreibe uns gerne über unser <a href="#kontakt" class="font-medium text-blue-500 underline">Kontaktformular</a>.</p>
+            </div>
+            <div class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl">
+
+                <SectionTeamMember name="Gustav" bild={TeamMemberProfilbildGustav} bereich="Moderation, Redaktion" farbe="text-pink-500" hintergrundForm="M34.2,-54.9C47,-51.8,62,-48.1,70.2,-38.9C78.4,-29.6,79.9,-14.8,80,0.1C80.2,14.9,78.9,29.9,70.8,39.3C62.6,48.7,47.6,52.6,34.7,57.1C21.7,61.6,10.9,66.7,-1.7,69.7C-14.3,72.7,-28.7,73.6,-42.4,69.6C-56.1,65.5,-69.2,56.5,-74.9,44.1C-80.6,31.7,-79,15.8,-77.6,0.8C-76.2,-14.2,-75,-28.4,-70.1,-42.3C-65.2,-56.2,-56.7,-69.8,-44.4,-73.2C-32.1,-76.6,-16.1,-69.9,-2.7,-65.2C10.7,-60.5,21.3,-58,34.2,-54.9Z" />
+                <SectionTeamMember name="Lolan" bild={TeamMemberProfilbildLolan} bereich="Redaktion" farbe="text-teal-300" hintergrundForm="M42.7,-73.4C55,-67,64.3,-54.7,69.9,-41.5C75.5,-28.3,77.5,-14.2,76.5,-0.6C75.4,12.9,71.3,25.8,64.6,37.3C57.9,48.7,48.8,58.6,37.6,63.1C26.4,67.5,13.2,66.5,0.8,65.2C-11.6,63.8,-23.2,62.1,-34.9,57.9C-46.6,53.7,-58.4,47.1,-67.1,37.1C-75.9,27,-81.6,13.5,-83.1,-0.9C-84.6,-15.2,-81.9,-30.5,-73.2,-40.7C-64.6,-51,-50.1,-56.4,-36.9,-62.3C-23.8,-68.2,-11.9,-74.6,1.7,-77.5C15.2,-80.4,30.5,-79.8,42.7,-73.4Z" />
+                <SectionTeamMember name="Max" bild={TeamMemberProfilbildPlatzhalter} bereich="Redaktion" farbe="text-yellow-400" hintergrundForm="M41.4,-70.8C54.1,-64.5,65,-54.1,70.7,-41.7C76.5,-29.2,77.1,-14.6,76.9,-0.1C76.6,14.3,75.5,28.6,68.8,39.5C62.1,50.3,49.9,57.7,37.5,63.5C25.1,69.3,12.5,73.5,-0.6,74.4C-13.6,75.4,-27.3,73.1,-37.6,66.1C-47.9,59.1,-54.8,47.4,-63.1,35.6C-71.4,23.8,-81,11.9,-83.2,-1.3C-85.4,-14.4,-80.1,-28.8,-70.3,-38C-60.5,-47.1,-46.1,-51.1,-33.6,-57.5C-21.2,-64,-10.6,-73,1.9,-76.3C14.4,-79.6,28.8,-77.2,41.4,-70.8Z" />
+                <SectionTeamMember name="Paul" bild={TeamMemberProfilbildPlatzhalter} bereich="Redaktion, Schnitt" farbe="text-blue-300" hintergrundForm="M34.2,-54.9C47,-51.8,62,-48.1,70.2,-38.9C78.4,-29.6,79.9,-14.8,80,0.1C80.2,14.9,78.9,29.9,70.8,39.3C62.6,48.7,47.6,52.6,34.7,57.1C21.7,61.6,10.9,66.7,-1.7,69.7C-14.3,72.7,-28.7,73.6,-42.4,69.6C-56.1,65.5,-69.2,56.5,-74.9,44.1C-80.6,31.7,-79,15.8,-77.6,0.8C-76.2,-14.2,-75,-28.4,-70.1,-42.3C-65.2,-56.2,-56.7,-69.8,-44.4,-73.2C-32.1,-76.6,-16.1,-69.9,-2.7,-65.2C10.7,-60.5,21.3,-58,34.2,-54.9Z" />
+                <SectionTeamMember name="Marek" bild={TeamMemberProfilbildMarek} bereich="Schnitt" farbe="text-red-500" hintergrundForm="M42.7,-73.4C55,-67,64.3,-54.7,69.9,-41.5C75.5,-28.3,77.5,-14.2,76.5,-0.6C75.4,12.9,71.3,25.8,64.6,37.3C57.9,48.7,48.8,58.6,37.6,63.1C26.4,67.5,13.2,66.5,0.8,65.2C-11.6,63.8,-23.2,62.1,-34.9,57.9C-46.6,53.7,-58.4,47.1,-67.1,37.1C-75.9,27,-81.6,13.5,-83.1,-0.9C-84.6,-15.2,-81.9,-30.5,-73.2,-40.7C-64.6,-51,-50.1,-56.4,-36.9,-62.3C-23.8,-68.2,-11.9,-74.6,1.7,-77.5C15.2,-80.4,30.5,-79.8,42.7,-73.4Z" />
+                <SectionTeamMember name="Konstantin" bild={TeamMemberProfilbildKonstantin}  bereich="Organisation, Redaktion, Schnitt" farbe="text-purple-400" hintergrundForm="M34.2,-54.9C47,-51.8,62,-48.1,70.2,-38.9C78.4,-29.6,79.9,-14.8,80,0.1C80.2,14.9,78.9,29.9,70.8,39.3C62.6,48.7,47.6,52.6,34.7,57.1C21.7,61.6,10.9,66.7,-1.7,69.7C-14.3,72.7,-28.7,73.6,-42.4,69.6C-56.1,65.5,-69.2,56.5,-74.9,44.1C-80.6,31.7,-79,15.8,-77.6,0.8C-76.2,-14.2,-75,-28.4,-70.1,-42.3C-65.2,-56.2,-56.7,-69.8,-44.4,-73.2C-32.1,-76.6,-16.1,-69.9,-2.7,-65.2C10.7,-60.5,21.3,-58,34.2,-54.9Z" />
+
+            </div>
+        </div>
+    </div>
+</section>

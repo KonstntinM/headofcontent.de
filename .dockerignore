@@ -1,9 +1,2 @@
-.tmp/
-.cache/
-.git/
-build/
-node_modules/
-.env
-data/
-.nuxt/
-cypress/
+node_modules
+dist
