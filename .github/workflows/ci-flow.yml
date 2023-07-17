@@ -28,6 +28,6 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           install: false
-          wait-on: 'http://localhost:80'
+          wait-on: 'http://localhost:3000'
           configFile: cypress.config.cjs
           command: npx cypress run
