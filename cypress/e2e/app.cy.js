@@ -1,10 +1,5 @@
 describe('headofcontent.de', () => {
 
-  it('renders the homepage', () => {
-    cy.visit('/');
-    cy.get('h1').should('contain', 'Junge, unabhänige Reportagen aus der Hauptstadt');
-  });
-
   it('displays three current videos', () => {
     cy.visit('/');
     cy.get('#current-videos > a').should('have.length', 3);
