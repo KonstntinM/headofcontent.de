@@ -1,0 +1,25 @@
+name: Docker Image Release Flow
+
+on:
+  release:
+    types: [published]
+
+jobs:
+
+ build :
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 🐳 Build and bundle the Docker image
+        run: |
+          docker build . --file Dockerfile --tag headofcontent.de:${{ github.event.release.tag_name }}
+          docker save headofcontent.de -o headofcontent.de_${{ github.event.release.tag_name }}.tar
+        
+      - name: 🌥 Attach Docker image to release assets
+        uses: AButler/upload-release-assets@v2.0
+        with:
+          files: '*.tar'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          release-tag: ${{ github.event.release.tag_name }}
