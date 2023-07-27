@@ -25,4 +25,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: headofcontent.de:${{ github.event.release.tag_name }}
+          tags: registry.headofcontent.de/headofcontent.de:${{ github.event.release.tag_name }}
