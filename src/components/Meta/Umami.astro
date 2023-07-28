@@ -1,0 +1,10 @@
+---
+export interface Props {
+  host: string;
+  dataId: string;
+  script?: string;
+}
+
+const { dataId, host, script = '/script.js' } = Astro.props;
+---
+<script async src={host + script} data-website-id={dataId}></script>
