@@ -15,7 +15,7 @@
             </div>
             <input v-model="message" type="text"  v-bind:class="{ 'border-red-500': error }" class="flex-1 w-full px-5 py-5 pb-32 text-xl border border-gray-300 rounded-lg focus:ring-4 focus:border-purple-700 focus:ring-blue-600 focus:ring-opacity-50 focus:outline-none" placeholder="Nachricht">
             <button v-if="success" class="bg-green-400 disabled md:max-w-xs flex-shrink-0 px-10 py-5 text-2xl font-medium text-center text-white rounded-lg focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none cursor-not-allowed">Gesendet! 🥳</button>
-            <button @click="send" v-else class="bg-blue-600 md:max-w-xs flex-shrink-0 px-10 py-5 text-2xl font-medium text-center text-white rounded-lg focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none">Senden</button>
+            <button @click="send" data-umami-event="Kontaktformular-Senden" v-else class="bg-blue-600 md:max-w-xs flex-shrink-0 px-10 py-5 text-2xl font-medium text-center text-white rounded-lg focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 focus:ring-offset-2 focus:outline-none">Senden</button>
                     
         <p class="text-gray-400">Mit dem Klicken auf Senden stimmst du unserer <a href="/datenschutzerklärung" class="text-blue-500 underline">Datenschutzerklärung</a> zu.</p>
 
@@ -67,8 +67,6 @@ export default {
       } catch {
           this.error = "Irgendetwas ist schief gelaufen. Das geht auf unsere Kappe! Bitte kontaktiere uns direkt über unsere E-Mailadresse (s. oben)."
       }*/
-      
-      plausible('Kontaktanfrage');
     }
   }
 }
