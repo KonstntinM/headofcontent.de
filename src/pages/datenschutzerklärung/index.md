@@ -31,7 +31,7 @@ Wir verwenden in unserem Kontaktformular den Dienst hCaptcha von Intuition Machi
 
 ### Analyse
 
-Wir nutzten das europäische OpenSource-Tool [Plausible](https://plausible.io/), um die Reichweite unserer Webseite zu messen. Wir verwenden keine Cookies, wir generieren keine dauerhaften Kennungen und wir sammeln oder speichern keine personenbezogenen Daten zu analysezwecken. Alle Daten, die wir sammeln, sind gebündelt und nicht personenbezogenen. Wenn du unsere Webseite besuchst speichern wir folgende Informationen: die konkrete Seite, die du besuchst, den HTTP-Referer, den Browser, den du benutzt, dein Betriebssystem, dein Gerätetyp und das Land, in dem du dich befindest.
+Wir nutzten das OpenSource-Tool [Umami](https://umami.is/), um die Reichweite unserer Webseite zu messen. Wir verwenden keine Cookies, wir generieren keine dauerhaften Kennungen und wir sammeln oder speichern keine personenbezogenen Daten zu analysezwecken. Alle Daten, die wir sammeln, sind gebündelt und nicht personenbezogenen. Wenn du unsere Webseite besuchst speichern wir folgende Informationen: die konkrete Seite, die du besuchst, den HTTP-Referer, den Browser, den du benutzt, dein Betriebssystem, dein Gerätetyp und das Land, in dem du dich befindest.
 
 ## Eingebettete Inhalte von anderen Websites
 
