@@ -26,3 +26,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: registry.headofcontent.de/headofcontent.de:latest
+          labels: de.headofcontent.version=${{ github.event.release.tag_name }}
