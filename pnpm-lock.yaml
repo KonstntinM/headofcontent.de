@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@astrojs/image':
     specifier: ^0.17.2
@@ -11,8 +15,8 @@ dependencies:
     specifier: ^2.2.1
     version: 2.2.1(@babel/core@7.22.5)(astro@2.8.3)(vite@4.4.4)(vue@3.3.4)
   '@googleapis/youtube':
-    specifier: ^9.0.0
-    version: 9.0.0
+    specifier: ^10.1.0
+    version: 10.1.0
   astro:
     specifier: ^2.8.3
     version: 2.8.3(@types/node@18.16.3)(sass@1.58.0)(sharp@0.32.3)
@@ -951,8 +955,8 @@ packages:
     dev: false
     optional: true
 
-  /@googleapis/youtube@9.0.0:
-    resolution: {integrity: sha512-abCi9o1nfODVsPDqiq/QCHte2rXgMXS7ssHoeJIWiRkbvECNNyYFtmXz96oWGMw8Pnpm3gZzMXsmC9cSdMDnvg==}
+  /@googleapis/youtube@10.1.0:
+    resolution: {integrity: sha512-+80fqeUYINfcYNNse6Qk7O1OTEjTLI0wx8wkxfmMnS3iDMzJVm/WkSMHZtVbGSZmZzD3d8/HDEFKviIastQ5Ng==}
     engines: {node: '>=12.0.0'}
     dependencies:
       googleapis-common: 6.0.4
@@ -5179,7 +5183,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
