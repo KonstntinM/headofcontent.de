@@ -13,10 +13,10 @@ dependencies:
     version: 4.0.0(astro@2.10.15)(tailwindcss@3.3.3)
   '@astrojs/vue':
     specifier: ^2.2.1
-    version: 2.2.1(@babel/core@7.22.5)(astro@2.10.15)(vite@4.4.4)(vue@3.3.4)
+    version: 2.2.1(@babel/core@7.22.5)(astro@2.10.15)(vite@4.4.9)(vue@3.3.4)
   '@googleapis/youtube':
-    specifier: ^9.0.0
-    version: 9.0.0
+    specifier: ^11.0.1
+    version: 11.0.1
   astro:
     specifier: ^2.10.15
     version: 2.10.15(@types/node@18.16.3)(sass@1.58.0)(sharp@0.32.3)
@@ -167,15 +167,15 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vue@2.2.1(@babel/core@7.22.5)(astro@2.10.15)(vite@4.4.4)(vue@3.3.4):
+  /@astrojs/vue@2.2.1(@babel/core@7.22.5)(astro@2.10.15)(vite@4.4.9)(vue@3.3.4):
     resolution: {integrity: sha512-fq+RKFAKpIRcobF/803kMJWv/lobf9IIk6K5As5fWE/eYTpykkgHtxd+zDnf7d4I2V7K9XLKV06Oi6Q+oTJmDw==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
       astro: ^2.5.6
       vue: ^3.2.30
     dependencies:
-      '@vitejs/plugin-vue': 4.2.3(vite@4.4.4)(vue@3.3.4)
-      '@vitejs/plugin-vue-jsx': 3.0.1(vite@4.4.4)(vue@3.3.4)
+      '@vitejs/plugin-vue': 4.2.3(vite@4.4.9)(vue@3.3.4)
+      '@vitejs/plugin-vue-jsx': 3.0.1(vite@4.4.9)(vue@3.3.4)
       '@vue/babel-plugin-jsx': 1.1.5(@babel/core@7.22.5)
       '@vue/compiler-sfc': 3.3.4
       astro: 2.10.15(@types/node@18.16.3)(sass@1.58.0)(sharp@0.32.3)
@@ -955,11 +955,11 @@ packages:
     dev: false
     optional: true
 
-  /@googleapis/youtube@9.0.0:
-    resolution: {integrity: sha512-abCi9o1nfODVsPDqiq/QCHte2rXgMXS7ssHoeJIWiRkbvECNNyYFtmXz96oWGMw8Pnpm3gZzMXsmC9cSdMDnvg==}
+  /@googleapis/youtube@11.0.1:
+    resolution: {integrity: sha512-xbA9u6ig0T4KWsWp3k9gNFZiIdtMewSK5AhofV2lMCLTl+fCdgJNpkaLsZTpdGwe7eg4r05qvhuCISXk5Ql3Hw==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      googleapis-common: 6.0.4
+      googleapis-common: 7.0.0
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -1136,7 +1136,7 @@ packages:
     dev: true
     optional: true
 
-  /@vitejs/plugin-vue-jsx@3.0.1(vite@4.4.4)(vue@3.3.4):
+  /@vitejs/plugin-vue-jsx@3.0.1(vite@4.4.9)(vue@3.3.4):
     resolution: {integrity: sha512-+Jb7ggL48FSPS1uhPnJbJwWa9Sr90vQ+d0InW+AhBM22n+cfuYqJZDckBc+W3QSHe1WDvewMZfa4wZOtk5pRgw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -1146,20 +1146,20 @@ packages:
       '@babel/core': 7.22.5
       '@babel/plugin-transform-typescript': 7.22.5(@babel/core@7.22.5)
       '@vue/babel-plugin-jsx': 1.1.5(@babel/core@7.22.5)
-      vite: 4.4.4(@types/node@18.16.3)(sass@1.58.0)
+      vite: 4.4.9(@types/node@18.16.3)(sass@1.58.0)
       vue: 3.3.4
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /@vitejs/plugin-vue@4.2.3(vite@4.4.4)(vue@3.3.4):
+  /@vitejs/plugin-vue@4.2.3(vite@4.4.9)(vue@3.3.4):
     resolution: {integrity: sha512-R6JDUfiZbJA9cMiguQ7jxALsgiprjBeHL5ikpXfJCH62pPHtI+JdJ5xWj6Ev73yXSlYl86+blXn1kZHQ7uElxw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.4.4(@types/node@18.16.3)(sass@1.58.0)
+      vite: 4.4.9(@types/node@18.16.3)(sass@1.58.0)
       vue: 3.3.4
     dev: false
 
@@ -1289,9 +1289,9 @@ packages:
     hasBin: true
     dev: false
 
-  /agent-base@6.0.2:
-    resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
-    engines: {node: '>= 6.0.0'}
+  /agent-base@7.1.0:
+    resolution: {integrity: sha512-o/zjMZRhJxny7OyEF+Op8X+efiELC7k7yOjMzgfzVqOzXqkBkWI79YoTdOtsuWd5BWhAGAuOY/Xa6xpiaWXiNg==}
+    engines: {node: '>= 14'}
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
     transitivePeerDependencies:
@@ -1386,11 +1386,6 @@ packages:
 
   /array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
-    dev: false
-
-  /arrify@2.0.1:
-    resolution: {integrity: sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==}
-    engines: {node: '>=8'}
     dev: false
 
   /asn1@0.2.6:
@@ -2342,10 +2337,6 @@ packages:
       micromatch: 4.0.5
     dev: false
 
-  /fast-text-encoding@1.0.6:
-    resolution: {integrity: sha512-VhXlQgj9ioXCqGstD37E/HBeqEGV/qOD/kmbVG8h5xKBYvM1L3lR1Zn4555cQ8GkYbJa8aJSipLPndE1k6zK2w==}
-    dev: false
-
   /fastq@1.15.0:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
     dependencies:
@@ -2438,12 +2429,12 @@ packages:
   /function-bind@1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
 
-  /gaxios@5.1.2:
-    resolution: {integrity: sha512-mPyw3qQq6qoHWTe27CrzhSj7XYKVStTGrpP92a91FfogBWOd9BMW8GT5yS5WhEYGw02AgB1fVQVSAO+JKiQP0w==}
-    engines: {node: '>=12'}
+  /gaxios@6.1.0:
+    resolution: {integrity: sha512-EIHuesZxNyIkUGcTQKQPMICyOpDD/bi+LJIJx+NLsSGmnS7N+xCLRX5bi4e9yAu9AlSZdVq+qlyWWVuTh/483w==}
+    engines: {node: '>=14'}
     dependencies:
       extend: 3.0.2
-      https-proxy-agent: 5.0.1
+      https-proxy-agent: 7.0.1
       is-stream: 2.0.1
       node-fetch: 2.6.12
     transitivePeerDependencies:
@@ -2451,11 +2442,11 @@ packages:
       - supports-color
     dev: false
 
-  /gcp-metadata@5.3.0:
-    resolution: {integrity: sha512-FNTkdNEnBdlqF2oatizolQqNANMrcqJt6AAYt99B3y1aLLC8Hc5IOBb+ZnnzllodEEf6xMBp6wRcBbc16fa65w==}
-    engines: {node: '>=12'}
+  /gcp-metadata@6.0.0:
+    resolution: {integrity: sha512-Ozxyi23/1Ar51wjUT2RDklK+3HxqDr8TLBNK8rBBFQ7T85iIGnXnVusauj06QyqCXRFZig8LZC+TUddWbndlpQ==}
+    engines: {node: '>=14'}
     dependencies:
-      gaxios: 5.1.2
+      gaxios: 6.1.0
       json-bigint: 1.0.0
     transitivePeerDependencies:
       - encoding
@@ -2558,17 +2549,15 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /google-auth-library@8.9.0:
-    resolution: {integrity: sha512-f7aQCJODJFmYWN6PeNKzgvy9LI2tYmXnzpNDHEjG5sDNPgGb2FXQyTBnXeSH+PAtpKESFD+LmHw3Ox3mN7e1Fg==}
-    engines: {node: '>=12'}
+  /google-auth-library@9.0.0:
+    resolution: {integrity: sha512-IQGjgQoVUAfOk6khqTVMLvWx26R+yPw9uLyb1MNyMQpdKiKt0Fd9sp4NWoINjyGHR8S3iw12hMTYK7O8J07c6Q==}
+    engines: {node: '>=14'}
     dependencies:
-      arrify: 2.0.1
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
-      fast-text-encoding: 1.0.6
-      gaxios: 5.1.2
-      gcp-metadata: 5.3.0
-      gtoken: 6.1.2
+      gaxios: 6.1.0
+      gcp-metadata: 6.0.0
+      gtoken: 7.0.1
       jws: 4.0.0
       lru-cache: 6.0.0
     transitivePeerDependencies:
@@ -2576,21 +2565,13 @@ packages:
       - supports-color
     dev: false
 
-  /google-p12-pem@4.0.1:
-    resolution: {integrity: sha512-WPkN4yGtz05WZ5EhtlxNDWPhC4JIic6G8ePitwUWy4l+XPVYec+a0j0Ts47PDtW59y3RwAhUd9/h9ZZ63px6RQ==}
-    engines: {node: '>=12.0.0'}
-    hasBin: true
-    dependencies:
-      node-forge: 1.3.1
-    dev: false
-
-  /googleapis-common@6.0.4:
-    resolution: {integrity: sha512-m4ErxGE8unR1z0VajT6AYk3s6a9gIMM6EkDZfkPnES8joeOlEtFEJeF8IyZkb0tjPXkktUfYrE4b3Li1DNyOwA==}
-    engines: {node: '>=12.0.0'}
+  /googleapis-common@7.0.0:
+    resolution: {integrity: sha512-58iSybJPQZ8XZNMpjrklICefuOuyJ0lMxfKmBqmaC0/xGT4SiOs4BE60LAOOGtBURy1n8fHa2X2YUNFEWWbXyQ==}
+    engines: {node: '>=14.0.0'}
     dependencies:
       extend: 3.0.2
-      gaxios: 5.1.2
-      google-auth-library: 8.9.0
+      gaxios: 6.1.0
+      google-auth-library: 9.0.0
       qs: 6.11.2
       url-template: 2.0.8
       uuid: 9.0.0
@@ -2612,12 +2593,11 @@ packages:
       strip-bom-string: 1.0.0
     dev: false
 
-  /gtoken@6.1.2:
-    resolution: {integrity: sha512-4ccGpzz7YAr7lxrT2neugmXQ3hP9ho2gcaityLVkiUecAiwiy60Ii8gRbZeOsXV19fYaRjgBSshs8kXw+NKCPQ==}
-    engines: {node: '>=12.0.0'}
+  /gtoken@7.0.1:
+    resolution: {integrity: sha512-KcFVtoP1CVFtQu0aSk3AyAt2og66PFhZAlkUOuWKwzMLoulHXG5W5wE5xAnHb+yl3/wEFoqGW7/cDGMU8igDZQ==}
+    engines: {node: '>=14.0.0'}
     dependencies:
-      gaxios: 5.1.2
-      google-p12-pem: 4.0.1
+      gaxios: 6.1.0
       jws: 4.0.0
     transitivePeerDependencies:
       - encoding
@@ -2748,11 +2728,11 @@ packages:
       sshpk: 1.17.0
     dev: true
 
-  /https-proxy-agent@5.0.1:
-    resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
-    engines: {node: '>= 6'}
+  /https-proxy-agent@7.0.1:
+    resolution: {integrity: sha512-Eun8zV0kcYS1g19r78osiQLEFIRspRUDd9tIfBCTBPBeMieF/EsJNL8VI3xOIdYRDEkjQnqOYPsZ2DsWsVsFwQ==}
+    engines: {node: '>= 14'}
     dependencies:
-      agent-base: 6.0.2
+      agent-base: 7.1.0
       debug: 4.3.4(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
@@ -3694,11 +3674,6 @@ packages:
       whatwg-url: 5.0.0
     dev: false
 
-  /node-forge@1.3.1:
-    resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
-    engines: {node: '>= 6.13.0'}
-    dev: false
-
   /node-releases@2.0.12:
     resolution: {integrity: sha512-QzsYKWhXTWx8h1kIvqfnC++o0pEmpRQA/aenALsL2F4pqNVr7YzcdMlDij5WBnwftRbJCNJL/O7zdKaxKPHqgQ==}
     dev: false
@@ -4298,14 +4273,6 @@ packages:
     dependencies:
       glob: 7.2.3
     dev: true
-
-  /rollup@3.26.3:
-    resolution: {integrity: sha512-7Tin0C8l86TkpcMtXvQu6saWH93nhG3dGQ1/+l5V2TDMceTxO7kDiK6GzbfLWNNxqJXm591PcEZUozZm51ogwQ==}
-    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: false
 
   /rollup@3.28.1:
     resolution: {integrity: sha512-R9OMQmIHJm9znrU3m3cpE8uhN0fGdXiawME7aZIpQqvpS/85+Vt1Hq1/yVIcYfOmaQiHjvXkQAoJukvLpau6Yw==}
@@ -4995,43 +4962,6 @@ packages:
       is-buffer: 2.0.5
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
-    dev: false
-
-  /vite@4.4.4(@types/node@18.16.3)(sass@1.58.0):
-    resolution: {integrity: sha512-4mvsTxjkveWrKDJI70QmelfVqTm+ihFAb6+xf4sjEU2TmUCTlVX87tmg/QooPEMQb/lM9qGHT99ebqPziEd3wg==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 18.16.3
-      esbuild: 0.18.13
-      postcss: 8.4.26
-      rollup: 3.26.3
-      sass: 1.58.0
-    optionalDependencies:
-      fsevents: 2.3.2
     dev: false
 
   /vite@4.4.9(@types/node@18.16.3)(sass@1.58.0):
